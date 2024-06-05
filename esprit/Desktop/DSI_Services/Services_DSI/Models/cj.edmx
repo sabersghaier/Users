@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CODE_NOMENCLATURE">
+          <Key>
+            <PropertyRef Name="CODE_STR" />
+            <PropertyRef Name="CODE_NOME" />
+          </Key>
+          <Property Name="CODE_STR" Type="varchar2" MaxLength="3" Nullable="false" />
+          <Property Name="CODE_NOME" Type="varchar2" MaxLength="10" Nullable="false" />
+          <Property Name="LIB_NOME" Type="varchar2" MaxLength="4000" />
+          <Property Name="LIB_NOME2" Type="varchar2" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="ESP_ETUDIANT">
+          <Key>
+            <PropertyRef Name="ID_ET" />
+          </Key>
+          <Property Name="ID_ET" Type="varchar2" MaxLength="11" Nullable="false" />
+          <Property Name="NOM_ET" Type="varchar2" MaxLength="35" />
+          <Property Name="PNOM_ET" Type="varchar2" MaxLength="35" />
+          <Property Name="DATE_NAIS_ET" Type="date" />
+          <Property Name="LIEU_NAIS_ET" Type="varchar2" MaxLength="50" />
+          <Property Name="NATURE_ET" Type="varchar2" MaxLength="2" />
+          <Property Name="FONCTION_ET" Type="varchar2" MaxLength="30" />
+          <Property Name="ADRESSE_ET" Type="varchar2" MaxLength="100" />
+          <Property Name="TEL_ET" Type="varchar2" MaxLength="120" />
+          <Property Name="TEL_PARENT_ET" Type="varchar2" MaxLength="30" />
+          <Property Name="E_MAIL_ET" Type="varchar2" MaxLength="60" />
+          <Property Name="CYCLE_ET" Type="varchar2" MaxLength="2" />
+          <Property Name="NATURE_BAC" Type="varchar2" MaxLength="2" />
+          <Property Name="DATE_BAC" Type="date" />
+          <Property Name="NUM_BAC_ET" Type="varchar2" MaxLength="20" />
+          <Property Name="ETAB_BAC" Type="varchar2" MaxLength="100" />
+          <Property Name="DIPLOME_SUP_ET" Type="varchar2" MaxLength="100" />
+          <Property Name="NIVEAU_DIPLOME_SUP_ET" Type="number" Precision="38" Scale="0" />
+          <Property Name="ETAB_ORIGINE" Type="varchar2" MaxLength="100" />
+          <Property Name="SPECIALITE_ESP_ET" Type="varchar2" MaxLength="2" />
+          <Property Name="DATE_ENTREE_ESP_ET" Type="date" />
+          <Property Name="ANNEE_ENTREE_ESP_ET" Type="varchar2" MaxLength="4" />
+          <Property Name="CLASSE_COURANTE_ET" Type="varchar2" MaxLength="10" />
+          <Property Name="SITUATION_FINANCIERE_ET" Type="varchar2" MaxLength="2" />
+          <Property Name="NIVEAU_COURANT_ET" Type="number" Precision="1" Scale="0" />
+          <Property Name="MOYENNE_DERN_SEMESTRE_ET" Type="number" Precision="5" Scale="2" />
+          <Property Name="RESULTAT_FINAL_ET" Type="varchar2" MaxLength="2" />
+          <Property Name="DIPLOME_OBTENU_ESP_ET" Type="varchar2" MaxLength="2" />
+          <Property Name="DATE_SORTIE_ET" Type="date" />
+          <Property Name="OBSERVATION_ET" Type="varchar2" MaxLength="1000" />
+          <Property Name="SEXE" Type="varchar2" MaxLength="1" />
+          <Property Name="NATIONALITE" Type="varchar2" MaxLength="20" />
+          <Property Name="NUM_CIN_PASSEPORT" Type="varchar2" MaxLength="30" />
+          <Property Name="DATE_SAISIE" Type="date" />
+          <Property Name="DATE_DERN_MODIF" Type="date" />
+          <Property Name="AGENT" Type="varchar2" MaxLength="10" />
+          <Property Name="NUM_ORD" Type="varchar2" MaxLength="10" />
+          <Property Name="DATE_DELIVRANCE" Type="date" />
+          <Property Name="LIEU_DELIVRANCE" Type="varchar2" MaxLength="30" />
+          <Property Name="NIVEAU_ACCES" Type="number" Precision="1" Scale="0" />
+          <Property Name="NATURE_COURS" Type="varchar2" MaxLength="2" />
+          <Property Name="NATURE_PIECE_ID" Type="varchar2" MaxLength="1" />
+          <Property Name="ADRESSE_PARENT" Type="varchar2" MaxLength="100" />
+          <Property Name="CP_PARENT" Type="varchar2" MaxLength="6" />
+          <Property Name="VILLE_PARENT" Type="varchar2" MaxLength="30" />
+          <Property Name="PAYS_PARENT" Type="varchar2" MaxLength="30" />
+          <Property Name="CP_ET" Type="varchar2" MaxLength="6" />
+          <Property Name="VILLE_ET" Type="varchar2" MaxLength="30" />
+          <Property Name="PAYS_ET" Type="varchar2" MaxLength="30" />
+          <Property Name="E_MAIL_PARENT" Type="varchar2" MaxLength="60" />
+          <Property Name="TEL_PARENT" Type="varchar2" MaxLength="40" />
+          <Property Name="TYPE_ENREG_ET" Type="varchar2" MaxLength="1" />
+          <Property Name="DATE_LIEU_NAIS" Type="varchar2" MaxLength="50" />
+          <Property Name="CODE_ETAB_ORIGINE" Type="varchar2" MaxLength="10" />
+          <Property Name="CODE_SPEC_ORIGINE" Type="varchar2" MaxLength="3" />
+          <Property Name="LIB_SPEC_ORIGINE" Type="varchar2" MaxLength="100" />
+          <Property Name="CLASSE_PREC_ET" Type="varchar2" MaxLength="10" />
+          <Property Name="ID_ET_ORIGIN" Type="varchar2" MaxLength="10" />
+          <Property Name="ETAT" Type="varchar2" MaxLength="1" />
+          <Property Name="JUSTIF_ETAT" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_JUSTIF_ETAT" Type="varchar2" MaxLength="30" />
+          <Property Name="ID_ET_NEW" Type="varchar2" MaxLength="10" />
+          <Property Name="ID_ET_ORIGINE" Type="varchar2" MaxLength="10" />
+          <Property Name="DATE_LAST_CHANGE_ETAT" Type="date" />
+          <Property Name="DERN_UTILISATEUR" Type="varchar2" MaxLength="16" />
+          <Property Name="NUMCOMPTE" Type="varchar2" MaxLength="10" />
+          <Property Name="BANQUE" Type="varchar2" MaxLength="50" />
+          <Property Name="RIB_BANQUE" Type="varchar2" MaxLength="22" />
+          <Property Name="MP08" Type="varchar2" MaxLength="10" />
+          <Property Name="TYPE_ET" Type="varchar2" MaxLength="1" />
+          <Property Name="CODE_NATIONALITE" Type="varchar2" MaxLength="2" />
+          <Property Name="NUMPROMOTIONCS" Type="number" Precision="4" Scale="0" />
+          <Property Name="CODE_DECISION_SESSION_P_AP1" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_P_AP1" Type="varchar2" MaxLength="200" />
+          <Property Name="CODE_DECISION_SESSION_R_AP1" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_R_AP1" Type="varchar2" MaxLength="200" />
+          <Property Name="CODE_DECISION_SESSION_P_AP2" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_P_AP2" Type="varchar2" MaxLength="200" />
+          <Property Name="CODE_DECISION_SESSION_R_AP2" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_R_AP2" Type="varchar2" MaxLength="200" />
+          <Property Name="CODE_DECISION_SESSION_P_AP3" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_P_AP3" Type="varchar2" MaxLength="200" />
+          <Property Name="CODE_DECISION_SESSION_R_AP3" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_R_AP3" Type="varchar2" MaxLength="200" />
+          <Property Name="MOY_P_AP1" Type="number" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP1" Type="number" Precision="5" Scale="2" />
+          <Property Name="MOY_P_AP2" Type="number" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP2" Type="number" Precision="5" Scale="2" />
+          <Property Name="MOY_P_AP3" Type="number" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP3" Type="number" Precision="5" Scale="2" />
+          <Property Name="NB_IMP_RELEVE" Type="number" Precision="2" Scale="0" />
+          <Property Name="CODE_BARRE" Type="varchar2" MaxLength="20" />
+          <Property Name="MOY_BAC_ET" Type="varchar2" MaxLength="20" />
+          <Property Name="LOGIN" Type="varchar2" MaxLength="50" />
+          <Property Name="PASSWORD" Type="varchar2" MaxLength="50" />
+          <Property Name="FONCTION_PERE_ET" Type="varchar2" MaxLength="200" />
+          <Property Name="FONCTION_MERE_ET" Type="varchar2" MaxLength="200" />
+          <Property Name="TEL_MERE_ET" Type="varchar2" MaxLength="20" />
+          <Property Name="TEL_PERE_ET" Type="varchar2" MaxLength="20" />
+          <Property Name="EMAIL_PERE_ET" Type="varchar2" MaxLength="200" />
+          <Property Name="EMAIL_MERE_ET" Type="varchar2" MaxLength="200" />
+          <Property Name="NOM_PERE_ET" Type="varchar2" MaxLength="100" />
+          <Property Name="NOM_MERE_ET" Type="varchar2" MaxLength="100" />
+          <Property Name="ANNEE_BAC" Type="varchar2" MaxLength="10" />
+          <Property Name="ANNEE_DIPLOME" Type="varchar2" MaxLength="10" />
+          <Property Name="MOY_BAC_ET2" Type="number" Precision="5" Scale="2" />
+          <Property Name="ENTRETIEN_ANGLAIS" Type="number" Precision="5" Scale="2" />
+          <Property Name="ENTRETIEN_FRANCAIS" Type="number" Precision="5" Scale="2" />
+          <Property Name="ENS_ID_ENS" Type="varchar2" MaxLength="255" />
+          <Property Name="COMITE_ID_GRP" Type="number" Precision="10" Scale="0" />
+          <Property Name="FK_ENS" Type="varchar2" MaxLength="255" />
+          <Property Name="FK_ENSEI" Type="varchar2" MaxLength="255" />
+          <Property Name="TEL_ET1" Type="number" Precision="20" Scale="0" />
+          <Property Name="MOY_BAC" Type="number" Precision="5" Scale="2" />
+          <Property Name="FILIERE_PREPA" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_FILIERE_PREPA" Type="varchar2" MaxLength="20" />
+          <Property Name="DATEENTR" Type="varchar2" MaxLength="20" />
+          <Property Name="SCORE_FINAL" Type="number" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="SCORE_MIN_ADMIN" Type="number" Precision="10" Scale="3" />
+          <Property Name="USER_TRANSF_PREINSCRIT" Type="varchar2" MaxLength="16" />
+          <Property Name="DATE_TRANSF_PREINSCRIT" Type="date" />
+          <Property Name="NUM_LOT" Type="number" Precision="1" Scale="0" />
+          <Property Name="RECOMMANDATION" Type="varchar2" MaxLength="1" />
+          <Property Name="GOUVERNORAT" Type="varchar2" MaxLength="20" />
+          <Property Name="ADRESSE_MAIL_ESP" Type="varchar2" MaxLength="50" />
+          <Property Name="PWD_ET" Type="varchar2" MaxLength="30" />
+          <Property Name="PWD_ET_INIT" Type="varchar2" MaxLength="25" />
+          <Property Name="SUIVI_PARTICULIER" Type="varchar2" MaxLength="1" />
+          <Property Name="NIVEAU_COURANT_ANG" Type="varchar2" MaxLength="2" />
+          <Property Name="NIVEAU_COURANT_FR" Type="varchar2" MaxLength="2" />
+          <Property Name="NOM_ARB" Type="varchar2" MaxLength="30" />
+          <Property Name="PNOM_ARB" Type="varchar2" MaxLength="30" />
+          <Property Name="LIEU_NAIS_ARB" Type="varchar2" MaxLength="30" />
+          <Property Name="NATURE_BAC_ARB" Type="varchar2" MaxLength="100" />
+          <Property Name="DIPLOME_SUP_ARB" Type="varchar2" MaxLength="100" />
+          <Property Name="ETAB_ORIGINE_ARB" Type="varchar2" MaxLength="100" />
+          <Property Name="ID_ELEVE_EDUSERV" Type="varchar2" MaxLength="10" />
+          <Property Name="PWD_PARENT" Type="varchar2" MaxLength="20" />
+          <Property Name="NUM_ANNUEL_DIPLOME" Type="number" Precision="4" Scale="0" />
+          <Property Name="NUM_ANNEXE" Type="number" Precision="2" Scale="0" />
+          <Property Name="ORIENTATION" Type="varchar2" MaxLength="50" />
+          <Property Name="GROUPE_TARIF" Type="varchar2" MaxLength="20" />
+          <Property Name="CAT_ETAB_ORIGINE" Type="varchar2" MaxLength="2" />
+          <Property Name="ETAB_ORIGIN_NEW" Type="varchar2" MaxLength="10" />
+          <Property Name="CODE_RFID" Type="varchar2" MaxLength="20" />
+          <Property Name="DATE_HEURE_CREATION" Type="date" />
+          <Property Name="ORA_ROWSCN" Type="varchar2" MaxLength="250" />
+          <Property Name="CHOIX_A_B" Type="varchar2" MaxLength="2" />
+          <Property Name="CODE_GOUVERNORAT" Type="varchar2" MaxLength="2" />
+          <Property Name="PWD_JWT_ETUDIANT" Type="varchar2" MaxLength="255" />
+          <Property Name="DATE_MODIFY_JWT_PWD" Type="date" />
+          <Property Name="NB_DOC_ET" Type="number" Precision="38" Scale="0" />
+          <Property Name="CURSUS_ET" Type="varchar2" MaxLength="10" />
+          <Property Name="VALID_PROJET" Type="varchar2" MaxLength="20" />
+          <Property Name="SESSION_COVID" Type="varchar2" MaxLength="20" />
+          <Property Name="PROLONGATION_RGLT" Type="varchar2" MaxLength="1" />
+          <Property Name="DATE_DEBUT_PRGL" Type="date" />
+          <Property Name="DATE_FIN_PRGL" Type="date" />
+          <Property Name="DATE_CREATION_TOKEN" Type="date" />
+          <Property Name="TOKEN" Type="varchar2" MaxLength="255" />
+          <Property Name="TOKN_STUDENT" Type="varchar2" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ESP_INSCRIPTION">
+          <Key>
+            <PropertyRef Name="ANNEE_DEB" />
+            <PropertyRef Name="ID_ET" />
+          </Key>
+          <Property Name="ANNEE_DEB" Type="varchar2" MaxLength="4" Nullable="false" />
+          <Property Name="ANNEE_FIN" Type="varchar2" MaxLength="4" />
+          <Property Name="CODE_CL" Type="varchar2" MaxLength="10" Nullable="false" />
+          <Property Name="ID_ET" Type="varchar2" MaxLength="10" Nullable="false" />
+          <Property Name="COUT_ANNUEL" Type="number" Precision="18" Scale="6" />
+          <Property Name="FRAIS_INS" Type="number" Precision="18" Scale="6" />
+          <Property Name="TYPE_RGLT" Type="varchar2" MaxLength="2" />
+          <Property Name="MODE_RGLT" Type="varchar2" MaxLength="2" />
+          <Property Name="CODE_DEV" Type="varchar2" MaxLength="4" />
+          <Property Name="COUT_DEV" Type="number" Precision="18" Scale="6" />
+          <Property Name="SIT_RGLT" Type="varchar2" MaxLength="1" />
+          <Property Name="CREDIT_RGLT" Type="number" Precision="18" Scale="6" />
+          <Property Name="NB_CREDIT_MODULE" Type="number" Precision="10" Scale="2" />
+          <Property Name="MOY_SEM1" Type="number" Precision="7" Scale="4" />
+          <Property Name="MOY_SEM2" Type="number" Precision="7" Scale="4" />
+          <Property Name="MOY_GENERAL" Type="number" Precision="7" Scale="4" />
+          <Property Name="RESULTAT" Type="varchar2" MaxLength="2" />
+          <Property Name="NIVEAU_ACCEES" Type="number" Precision="1" Scale="0" />
+          <Property Name="TYPE_INSC" Type="varchar2" MaxLength="1" Nullable="false" />
+          <Property Name="SEMESTRE" Type="number" Precision="1" Scale="0" />
+          <Property Name="NIV_LANGUE" Type="varchar2" MaxLength="5" />
+          <Property Name="CODE_CL_LANGUE" Type="varchar2" MaxLength="10" />
+          <Property Name="UTILISATEUR" Type="varchar2" MaxLength="16" />
+          <Property Name="DERN_UTILISATEUR" Type="varchar2" MaxLength="16" />
+          <Property Name="DATE_PREINSC" Type="date" />
+          <Property Name="DATE_INSC" Type="date" />
+          <Property Name="CODE_CL1" Type="varchar2" MaxLength="10" />
+          <Property Name="CODE_CL2" Type="varchar2" MaxLength="10" />
+          <Property Name="MOY_RATT" Type="number" Precision="5" Scale="2" />
+          <Property Name="OBSERVATION" Type="varchar2" MaxLength="2000" />
+          <Property Name="NUMPROMOTIONCS" Type="number" Precision="4" Scale="0" />
+          <Property Name="CODE_DECISION_SESSION_P" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_P" Type="varchar2" MaxLength="200" />
+          <Property Name="CODE_DECISION_SESSION_RAT" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_RAT" Type="varchar2" MaxLength="500" />
+          <Property Name="NB_IMP_ATTEST_REUSSITE" Type="number" Precision="2" Scale="0" />
+          <Property Name="DATE_LAST_MAJ_DECISION_PRINC" Type="date" />
+          <Property Name="DATE_LAST_MAJ_DECISION_RATT" Type="date" />
+          <Property Name="CREDIT_ANT" Type="varchar2" MaxLength="20" />
+          <Property Name="NB_IMP_RELEVE" Type="number" Precision="2" Scale="0" />
+          <Property Name="ETAT_ENTRETIEN" Type="varchar2" MaxLength="1" />
+          <Property Name="DATE_LAST_MODIF_RAT2" Type="date" />
+          <Property Name="MOY_RAT2" Type="number" Precision="5" Scale="2" />
+          <Property Name="CODE_DECISION_SESSION_RAT2" Type="varchar2" MaxLength="2" />
+          <Property Name="LIB_DECISION_SESSION_RAT2" Type="varchar2" MaxLength="200" />
+          <Property Name="ADMIS_RACH" Type="varchar2" MaxLength="1" />
+          <Property Name="MOY_RAT_AV_RACH" Type="number" Precision="10" Scale="2" />
+          <Property Name="ADMIS_TS" Type="varchar2" MaxLength="1" />
+          <Property Name="DATE_LIM_PROLONG_RGLT" Type="date" />
+          <Property Name="NIV_ACQUIS_FRANCAIS" Type="varchar2" MaxLength="2" />
+          <Property Name="MAJ_NIVEAU_DEFINITIF" Type="number" Precision="1" Scale="0" />
+          <Property Name="RESERVE" Type="varchar2" MaxLength="1" />
+          <Property Name="NB_ECTS_SP" Type="number" Precision="6" Scale="2" />
+          <Property Name="NB_ECTS_SR" Type="number" Precision="6" Scale="2" />
+          <Property Name="NIV_ACQUIS_ANGLAIS" Type="varchar2" MaxLength="2" />
+          <Property Name="DATE_TEST_FR" Type="date" />
+          <Property Name="DATE_TEST_ANG" Type="date" />
+          <Property Name="PREP_TOEIC" Type="varchar2" MaxLength="1" Nullable="false" />
+          <Property Name="TEST_TOEIC" Type="varchar2" MaxLength="1" Nullable="false" />
+          <Property Name="ETAT_INS_TEST_NIV" Type="varchar2" MaxLength="1" Nullable="false" />
+          <Property Name="USER_LANG_MODIF" Type="varchar2" MaxLength="20" />
+          <Property Name="RANG_SP" Type="number" Precision="3" Scale="0" />
+          <Property Name="NUM_ANNUEL_DIPLOME" Type="number" Precision="4" Scale="0" />
+          <Property Name="NUM_ANNEXE" Type="number" Precision="2" Scale="0" />
+          <Property Name="GROUPE_TARIF" Type="varchar2" MaxLength="20" />
+          <Property Name="MOY_GEN_AV_PFE" Type="number" Precision="10" Scale="3" />
+          <Property Name="NB_ECTS_AV_PFE" Type="number" Precision="5" Scale="2" />
+          <Property Name="NOTE_PFE" Type="number" Precision="10" Scale="3" />
+          <Property Name="COEF_PFE" Type="number" Precision="5" Scale="2" />
+          <Property Name="MOY_GEN_AV_PFE_SP" Type="number" Precision="10" Scale="3" />
+          <Property Name="MOY_GEN_AV_PFE_SR" Type="number" Precision="10" Scale="3" />
+          <Property Name="ETAT_FINANCIER" Type="number" Precision="1" Scale="0" />
+          <Property Name="TEM_NUM" Type="number" Precision="10" Scale="0" />
+          <Property Name="MG_SEVED" Type="number" Precision="5" Scale="2" />
+          <Property Name="RACHAT_UE_ET" Type="varchar2" MaxLength="1" />
+          <Property Name="ENCADRANT_PEDA" Type="varchar2" MaxLength="10" />
+          <Property Name="DATE_CREATION" Type="date" Nullable="false" />
+          <Property Name="NUM_MOIS_INSC" Type="number" Precision="6" Scale="0" />
+          <Property Name="NUM_SEMAINE" Type="number" Precision="1" Scale="0" />
+          <Property Name="NE" Type="varchar2" MaxLength="1" />
+          <Property Name="DATE_NE" Type="date" />
+          <Property Name="GROUPE_RGLT" Type="number" Precision="1" Scale="0" />
+          <Property Name="NE2" Type="varchar2" MaxLength="1" />
+          <Property Name="SOLDE_ET" Type="number" Precision="10" Scale="3" />
+          <Property Name="EXPERT_PEDA" Type="varchar2" MaxLength="10" />
+          <Property Name="MOTIF_RGLT" Type="varchar2" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SERVICES_DSI_PRIVILEGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="PRIVILEGE2" Type="varchar2" MaxLength="20" />
+          <Property Name="PRIVLEGE" Type="varchar2" MaxLength="20" />
+          <Property Name="FERMER" Type="varchar2" MaxLength="20" />
+          <Property Name="DEPLACER" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SOCIETE">
+          <Key>
+            <PropertyRef Name="CODE_SOC" />
+          </Key>
+          <Property Name="CODE_SOC" Type="varchar2" MaxLength="2" Nullable="false" />
+          <Property Name="NOM_SOC" Type="varchar2" MaxLength="100" />
+          <Property Name="ADR_SOC" Type="varchar2" MaxLength="40" />
+          <Property Name="TEL_SOC" Type="varchar2" MaxLength="20" />
+          <Property Name="FAX_SOC" Type="varchar2" MaxLength="20" />
+          <Property Name="SIGLE" Type="bfile" />
+          <Property Name="E_MAIL" Type="varchar2" MaxLength="50" />
+          <Property Name="CODE_POSTAL" Type="varchar2" MaxLength="4" />
+          <Property Name="DATE_CR" Type="date" />
+          <Property Name="DATE_MAJ" Type="date" />
+          <Property Name="VILLE" Type="varchar2" MaxLength="40" />
+          <Property Name="RIB" Type="varchar2" MaxLength="25" />
+          <Property Name="CODE_TVA" Type="varchar2" MaxLength="15" />
+          <Property Name="BANQUE" Type="varchar2" MaxLength="20" />
+          <Property Name="RC" Type="varchar2" MaxLength="15" />
+          <Property Name="CODE_RGLT_COMPTANT" Type="varchar2" MaxLength="3" />
+          <Property Name="CODE_RGLT_ESPECE" Type="varchar2" MaxLength="3" />
+          <Property Name="ANNEE_DEB" Type="varchar2" MaxLength="4" />
+          <Property Name="ANNEE_FIN" Type="varchar2" MaxLength="4" />
+          <Property Name="TAUX_EXAM" Type="number" Precision="5" Scale="2" />
+          <Property Name="TAUX_DS" Type="number" Precision="5" Scale="2" />
+          <Property Name="TAUX_TP" Type="number" Precision="5" Scale="2" />
+          <Property Name="TAUX_ORALE" Type="number" Precision="5" Scale="2" />
+          <Property Name="NB_MAX_ABS_MODULE" Type="number" Precision="38" Scale="0" />
+          <Property Name="NB_SCEANCE_JOUR" Type="number" Precision="38" Scale="0" />
+          <Property Name="SYMBOLE" Type="char" MaxLength="10" />
+          <Property Name="TIMB_FISCAL" Type="number" Precision="6" Scale="3" />
+          <Property Name="TIMBRE_FISCAL" Type="number" Precision="6" Scale="3" />
+          <Property Name="DATE_DEBUT_SAISON" Type="date" />
+          <Property Name="NUM_SEMESTRE_ACTUEL" Type="number" Precision="38" Scale="0" />
+          <Property Name="CHEMIN_FICHIER_DONNEE" Type="varchar2" MaxLength="100" />
+          <Property Name="TAUX_EXAM_WITH_CC" Type="number" Precision="5" Scale="2" />
+          <Property Name="TAUX_EXAM_WITH_TP_CC" Type="number" Precision="5" Scale="2" />
+          <Property Name="MIN_MOY_RESUSSITE" Type="number" Precision="5" Scale="2" />
+          <Property Name="BI_RACHAT" Type="number" Precision="5" Scale="2" />
+          <Property Name="BS_RACHAT" Type="number" Precision="5" Scale="2" />
+          <Property Name="ID_VACATAIRE" Type="varchar2" MaxLength="16" />
+          <Property Name="GERER_SEMESTRE" Type="varchar2" MaxLength="1" />
+          <Property Name="FR_SCOLARITE_CS" Type="number" Precision="18" Scale="6" />
+          <Property Name="FR_SCOLARITE_CJ" Type="number" Precision="18" Scale="6" />
+          <Property Name="MIN_PANIER" Type="number" Precision="5" Scale="2" />
+          <Property Name="ID_DIRET" Type="varchar2" MaxLength="16" />
+          <Property Name="ID_SERV_SCOLAIRE" Type="varchar2" MaxLength="16" />
+          <Property Name="LIAISON_FINANCIER" Type="varchar2" MaxLength="1" />
+          <Property Name="TAUX_RGLT" Type="number" Precision="10" Scale="3" />
+          <Property Name="LIAISON_SITE" Type="varchar2" MaxLength="1" />
+          <Property Name="NUMPROMOTIONCS" Type="number" Precision="4" Scale="0" />
+          <Property Name="DATEDEMARRAGECS" Type="date" />
+          <Property Name="CONTROL_BALCKLISTE" Type="varchar2" MaxLength="1" />
+          <Property Name="MAX_VAL_CREDIT_ACCEPTE" Type="number" Precision="18" Scale="6" />
+          <Property Name="MAX_TAUX_CREDIT_ACCEPTE" Type="number" Precision="5" Scale="2" />
+          <Property Name="CREDIT_MAX" Type="number" Precision="18" Scale="6" />
+          <Property Name="ACTIVE_DISPENSE_AUTO" Type="varchar2" MaxLength="1" />
+          <Property Name="ACTIVE_MP_ENS" Type="varchar2" MaxLength="1" />
+          <Property Name="ACTIVE_MODULE_OPT" Type="varchar2" MaxLength="1" />
+          <Property Name="VERROU_RESUL" Type="varchar2" MaxLength="1" />
+          <Property Name="TOT_ECTS_ADMIS" Type="number" Precision="5" Scale="2" />
+          <Property Name="QUOTA_ECTS_NV" Type="number" Precision="5" Scale="2" />
+          <Property Name="ACTIVER_TAUX_ABSENCE" Type="varchar2" MaxLength="1" />
+          <Property Name="TAUX_MAX_ABSENCE" Type="number" Precision="5" Scale="2" />
+          <Property Name="NBH_SEMAINE" Type="number" Precision="4" Scale="1" />
+          <Property Name="BLOCK_OTHER_RAT" Type="varchar2" MaxLength="1" />
+          <Property Name="CTRL_CONFORM_ECTS" Type="number" Precision="38" Scale="0" />
+          <Property Name="CTRL_FIN_STAT" Type="varchar2" MaxLength="1" />
+          <Property Name="VERROU_PL_ETUDE" Type="varchar2" MaxLength="1" />
+          <Property Name="ANNEE_ADMISSION" Type="varchar2" MaxLength="4" />
+          <Property Name="DELIB_RESULTATS" Type="varchar2" MaxLength="1" />
+          <Property Name="AFFICH_NOTE" Type="varchar2" MaxLength="1" Nullable="false" />
+          <Property Name="DUREE_PFE" Type="number" Precision="2" Scale="0" />
+          <Property Name="ANNEE" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="STR_NOME">
+          <Key>
+            <PropertyRef Name="CODE_STR" />
+          </Key>
+          <Property Name="CODE_STR" Type="varchar2" MaxLength="3" Nullable="false" />
+          <Property Name="NOM_STR" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_CODE_NOM_REF_490_STR_NOME">
+          <End Role="STR_NOME" Type="Self.STR_NOME" Multiplicity="1" />
+          <End Role="CODE_NOMENCLATURE" Type="Self.CODE_NOMENCLATURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STR_NOME">
+              <PropertyRef Name="CODE_STR" />
+            </Principal>
+            <Dependent Role="CODE_NOMENCLATURE">
+              <PropertyRef Name="CODE_STR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ESP_INSC_REFERENCE_ESP_ETUD">
+          <End Role="ESP_ETUDIANT" Type="Self.ESP_ETUDIANT" Multiplicity="1" />
+          <End Role="ESP_INSCRIPTION" Type="Self.ESP_INSCRIPTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESP_ETUDIANT">
+              <PropertyRef Name="ID_ET" />
+            </Principal>
+            <Dependent Role="ESP_INSCRIPTION">
+              <PropertyRef Name="ID_ET" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Model1StoreContainer">
+          <EntitySet Name="CODE_NOMENCLATURE" EntityType="Self.CODE_NOMENCLATURE" Schema="SCOESP09" store:Type="Tables" />
+          <EntitySet Name="ESP_ETUDIANT" EntityType="Self.ESP_ETUDIANT" Schema="SCOESP09" store:Type="Tables" />
+          <EntitySet Name="ESP_INSCRIPTION" EntityType="Self.ESP_INSCRIPTION" Schema="SCOESP09" store:Type="Tables" />
+          <EntitySet Name="SERVICES_DSI_PRIVILEGE" EntityType="Self.SERVICES_DSI_PRIVILEGE" Schema="SCOESP09" store:Type="Tables" />
+          <EntitySet Name="SOCIETE" EntityType="Self.SOCIETE" Schema="SCOESP09" store:Type="Tables" />
+          <EntitySet Name="STR_NOME" EntityType="Self.STR_NOME" Schema="SCOESP09" store:Type="Tables" />
+          <AssociationSet Name="FK_CODE_NOM_REF_490_STR_NOME" Association="Self.FK_CODE_NOM_REF_490_STR_NOME">
+            <End Role="STR_NOME" EntitySet="STR_NOME" />
+            <End Role="CODE_NOMENCLATURE" EntitySet="CODE_NOMENCLATURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ESP_INSC_REFERENCE_ESP_ETUD" Association="Self.FK_ESP_INSC_REFERENCE_ESP_ETUD">
+            <End Role="ESP_ETUDIANT" EntitySet="ESP_ETUDIANT" />
+            <End Role="ESP_INSCRIPTION" EntitySet="ESP_INSCRIPTION" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CODE_NOMENCLATURE">
+          <Key>
+            <PropertyRef Name="CODE_STR" />
+            <PropertyRef Name="CODE_NOME" />
+          </Key>
+          <Property Name="CODE_STR" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CODE_NOME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LIB_NOME" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_NOME2" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="STR_NOME" Relationship="Self.FK_CODE_NOM_REF_490_STR_NOME" FromRole="CODE_NOMENCLATURE" ToRole="STR_NOME" />
+        </EntityType>
+        <EntityType Name="ESP_ETUDIANT">
+          <Key>
+            <PropertyRef Name="ID_ET" />
+          </Key>
+          <Property Name="ID_ET" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOM_ET" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="PNOM_ET" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_NAIS_ET" Type="DateTime" />
+          <Property Name="LIEU_NAIS_ET" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NATURE_ET" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="FONCTION_ET" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ADRESSE_ET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_ET" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_PARENT_ET" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="E_MAIL_ET" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CYCLE_ET" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NATURE_BAC" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_BAC" Type="DateTime" />
+          <Property Name="NUM_BAC_ET" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ETAB_BAC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DIPLOME_SUP_ET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NIVEAU_DIPLOME_SUP_ET" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ETAB_ORIGINE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SPECIALITE_ESP_ET" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_ENTREE_ESP_ET" Type="DateTime" />
+          <Property Name="ANNEE_ENTREE_ESP_ET" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="CLASSE_COURANTE_ET" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SITUATION_FINANCIERE_ET" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NIVEAU_COURANT_ET" Type="Boolean" />
+          <Property Name="MOYENNE_DERN_SEMESTRE_ET" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="RESULTAT_FINAL_ET" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DIPLOME_OBTENU_ESP_ET" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_SORTIE_ET" Type="DateTime" />
+          <Property Name="OBSERVATION_ET" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="SEXE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NATIONALITE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NUM_CIN_PASSEPORT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_SAISIE" Type="DateTime" />
+          <Property Name="DATE_DERN_MODIF" Type="DateTime" />
+          <Property Name="AGENT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NUM_ORD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_DELIVRANCE" Type="DateTime" />
+          <Property Name="LIEU_DELIVRANCE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NIVEAU_ACCES" Type="Boolean" />
+          <Property Name="NATURE_COURS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NATURE_PIECE_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ADRESSE_PARENT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CP_PARENT" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="VILLE_PARENT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PAYS_PARENT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CP_ET" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="VILLE_ET" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PAYS_ET" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="E_MAIL_PARENT" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_PARENT" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="TYPE_ENREG_ET" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_LIEU_NAIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_ETAB_ORIGINE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_SPEC_ORIGINE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_SPEC_ORIGINE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CLASSE_PREC_ET" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ID_ET_ORIGIN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ETAT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="JUSTIF_ETAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_JUSTIF_ETAT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ID_ET_NEW" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ID_ET_ORIGINE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_LAST_CHANGE_ETAT" Type="DateTime" />
+          <Property Name="DERN_UTILISATEUR" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="NUMCOMPTE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BANQUE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RIB_BANQUE" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="MP08" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TYPE_ET" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_NATIONALITE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NUMPROMOTIONCS" Type="Int16" />
+          <Property Name="CODE_DECISION_SESSION_P_AP1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_P_AP1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_DECISION_SESSION_R_AP1" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_R_AP1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_DECISION_SESSION_P_AP2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_P_AP2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_DECISION_SESSION_R_AP2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_R_AP2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_DECISION_SESSION_P_AP3" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_P_AP3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_DECISION_SESSION_R_AP3" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_R_AP3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="MOY_P_AP1" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP1" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_P_AP2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_P_AP3" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_R_AP3" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="NB_IMP_RELEVE" Type="Byte" />
+          <Property Name="CODE_BARRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MOY_BAC_ET" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LOGIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FONCTION_PERE_ET" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FONCTION_MERE_ET" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_MERE_ET" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_PERE_ET" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL_PERE_ET" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL_MERE_ET" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="NOM_PERE_ET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NOM_MERE_ET" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ANNEE_BAC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ANNEE_DIPLOME" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MOY_BAC_ET2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ENTRETIEN_ANGLAIS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ENTRETIEN_FRANCAIS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ENS_ID_ENS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="COMITE_ID_GRP" Type="Int32" />
+          <Property Name="FK_ENS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FK_ENSEI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_ET1" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="MOY_BAC" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="FILIERE_PREPA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_FILIERE_PREPA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DATEENTR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SCORE_FINAL" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
+          <Property Name="SCORE_MIN_ADMIN" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="USER_TRANSF_PREINSCRIT" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_TRANSF_PREINSCRIT" Type="DateTime" />
+          <Property Name="NUM_LOT" Type="Boolean" />
+          <Property Name="RECOMMANDATION" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="GOUVERNORAT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ADRESSE_MAIL_ESP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PWD_ET" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PWD_ET_INIT" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="SUIVI_PARTICULIER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NIVEAU_COURANT_ANG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NIVEAU_COURANT_FR" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NOM_ARB" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PNOM_ARB" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="LIEU_NAIS_ARB" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NATURE_BAC_ARB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DIPLOME_SUP_ARB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ETAB_ORIGINE_ARB" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ID_ELEVE_EDUSERV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PWD_PARENT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NUM_ANNUEL_DIPLOME" Type="Int16" />
+          <Property Name="NUM_ANNEXE" Type="Byte" />
+          <Property Name="ORIENTATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GROUPE_TARIF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CAT_ETAB_ORIGINE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ETAB_ORIGIN_NEW" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_RFID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_HEURE_CREATION" Type="DateTime" />
+          <Property Name="ORA_ROWSCN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CHOIX_A_B" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_GOUVERNORAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="PWD_JWT_ETUDIANT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_MODIFY_JWT_PWD" Type="DateTime" />
+          <Property Name="NB_DOC_ET" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CURSUS_ET" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="VALID_PROJET" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SESSION_COVID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PROLONGATION_RGLT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_DEBUT_PRGL" Type="DateTime" />
+          <Property Name="DATE_FIN_PRGL" Type="DateTime" />
+          <Property Name="DATE_CREATION_TOKEN" Type="DateTime" />
+          <Property Name="TOKEN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TOKN_STUDENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ESP_INSCRIPTION" Relationship="Self.FK_ESP_INSC_REFERENCE_ESP_ETUD" FromRole="ESP_ETUDIANT" ToRole="ESP_INSCRIPTION" />
+        </EntityType>
+        <EntityType Name="ESP_INSCRIPTION">
+          <Key>
+            <PropertyRef Name="ANNEE_DEB" />
+            <PropertyRef Name="ID_ET" />
+          </Key>
+          <Property Name="ANNEE_DEB" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ANNEE_FIN" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_CL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_ET" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COUT_ANNUEL" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="FRAIS_INS" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="TYPE_RGLT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MODE_RGLT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_DEV" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="COUT_DEV" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="SIT_RGLT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CREDIT_RGLT" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="NB_CREDIT_MODULE" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MOY_SEM1" Type="Decimal" Precision="7" Scale="4" />
+          <Property Name="MOY_SEM2" Type="Decimal" Precision="7" Scale="4" />
+          <Property Name="MOY_GENERAL" Type="Decimal" Precision="7" Scale="4" />
+          <Property Name="RESULTAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="NIVEAU_ACCEES" Type="Boolean" />
+          <Property Name="TYPE_INSC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SEMESTRE" Type="Boolean" />
+          <Property Name="NIV_LANGUE" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_CL_LANGUE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UTILISATEUR" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="DERN_UTILISATEUR" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_PREINSC" Type="DateTime" />
+          <Property Name="DATE_INSC" Type="DateTime" />
+          <Property Name="CODE_CL1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_CL2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MOY_RATT" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="OBSERVATION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="NUMPROMOTIONCS" Type="Int16" />
+          <Property Name="CODE_DECISION_SESSION_P" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_P" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_DECISION_SESSION_RAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_RAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NB_IMP_ATTEST_REUSSITE" Type="Byte" />
+          <Property Name="DATE_LAST_MAJ_DECISION_PRINC" Type="DateTime" />
+          <Property Name="DATE_LAST_MAJ_DECISION_RATT" Type="DateTime" />
+          <Property Name="CREDIT_ANT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NB_IMP_RELEVE" Type="Byte" />
+          <Property Name="ETAT_ENTRETIEN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_LAST_MODIF_RAT2" Type="DateTime" />
+          <Property Name="MOY_RAT2" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CODE_DECISION_SESSION_RAT2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LIB_DECISION_SESSION_RAT2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ADMIS_RACH" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MOY_RAT_AV_RACH" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ADMIS_TS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_LIM_PROLONG_RGLT" Type="DateTime" />
+          <Property Name="NIV_ACQUIS_FRANCAIS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="MAJ_NIVEAU_DEFINITIF" Type="Boolean" />
+          <Property Name="RESERVE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NB_ECTS_SP" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="NB_ECTS_SR" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="NIV_ACQUIS_ANGLAIS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_TEST_FR" Type="DateTime" />
+          <Property Name="DATE_TEST_ANG" Type="DateTime" />
+          <Property Name="PREP_TOEIC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TEST_TOEIC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ETAT_INS_TEST_NIV" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USER_LANG_MODIF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RANG_SP" Type="Byte" />
+          <Property Name="NUM_ANNUEL_DIPLOME" Type="Int16" />
+          <Property Name="NUM_ANNEXE" Type="Byte" />
+          <Property Name="GROUPE_TARIF" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MOY_GEN_AV_PFE" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="NB_ECTS_AV_PFE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="NOTE_PFE" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="COEF_PFE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MOY_GEN_AV_PFE_SP" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="MOY_GEN_AV_PFE_SR" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="ETAT_FINANCIER" Type="Boolean" />
+          <Property Name="TEM_NUM" Type="Int32" />
+          <Property Name="MG_SEVED" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="RACHAT_UE_ET" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ENCADRANT_PEDA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_CREATION" Type="DateTime" Nullable="false" />
+          <Property Name="NUM_MOIS_INSC" Type="Int32" />
+          <Property Name="NUM_SEMAINE" Type="Boolean" />
+          <Property Name="NE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_NE" Type="DateTime" />
+          <Property Name="GROUPE_RGLT" Type="Boolean" />
+          <Property Name="NE2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SOLDE_ET" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="EXPERT_PEDA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MOTIF_RGLT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ESP_ETUDIANT" Relationship="Self.FK_ESP_INSC_REFERENCE_ESP_ETUD" FromRole="ESP_INSCRIPTION" ToRole="ESP_ETUDIANT" />
+        </EntityType>
+        <EntityType Name="SOCIETE">
+          <Key>
+            <PropertyRef Name="CODE_SOC" />
+          </Key>
+          <Property Name="CODE_SOC" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOM_SOC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ADR_SOC" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_SOC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FAX_SOC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SIGLE" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="E_MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_POSTAL" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_CR" Type="DateTime" />
+          <Property Name="DATE_MAJ" Type="DateTime" />
+          <Property Name="VILLE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="RIB" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_TVA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="BANQUE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_RGLT_COMPTANT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_RGLT_ESPECE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ANNEE_DEB" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ANNEE_FIN" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="TAUX_EXAM" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TAUX_DS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TAUX_TP" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TAUX_ORALE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="NB_MAX_ABS_MODULE" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="NB_SCEANCE_JOUR" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="SYMBOLE" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TIMB_FISCAL" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="TIMBRE_FISCAL" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="DATE_DEBUT_SAISON" Type="DateTime" />
+          <Property Name="NUM_SEMESTRE_ACTUEL" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CHEMIN_FICHIER_DONNEE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TAUX_EXAM_WITH_CC" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="TAUX_EXAM_WITH_TP_CC" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="MIN_MOY_RESUSSITE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="BI_RACHAT" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="BS_RACHAT" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ID_VACATAIRE" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="GERER_SEMESTRE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FR_SCOLARITE_CS" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="FR_SCOLARITE_CJ" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="MIN_PANIER" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ID_DIRET" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ID_SERV_SCOLAIRE" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="LIAISON_FINANCIER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TAUX_RGLT" Type="Decimal" Precision="10" Scale="3" />
+          <Property Name="LIAISON_SITE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NUMPROMOTIONCS" Type="Int16" />
+          <Property Name="DATEDEMARRAGECS" Type="DateTime" />
+          <Property Name="CONTROL_BALCKLISTE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MAX_VAL_CREDIT_ACCEPTE" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="MAX_TAUX_CREDIT_ACCEPTE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="CREDIT_MAX" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="ACTIVE_DISPENSE_AUTO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ACTIVE_MP_ENS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ACTIVE_MODULE_OPT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="VERROU_RESUL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TOT_ECTS_ADMIS" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="QUOTA_ECTS_NV" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="ACTIVER_TAUX_ABSENCE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TAUX_MAX_ABSENCE" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="NBH_SEMAINE" Type="Decimal" Precision="4" Scale="1" />
+          <Property Name="BLOCK_OTHER_RAT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CTRL_CONFORM_ECTS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CTRL_FIN_STAT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="VERROU_PL_ETUDE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ANNEE_ADMISSION" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="DELIB_RESULTATS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AFFICH_NOTE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DUREE_PFE" Type="Byte" />
+          <Property Name="ANNEE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="STR_NOME">
+          <Key>
+            <PropertyRef Name="CODE_STR" />
+          </Key>
+          <Property Name="CODE_STR" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOM_STR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CODE_NOMENCLATURE" Relationship="Self.FK_CODE_NOM_REF_490_STR_NOME" FromRole="STR_NOME" ToRole="CODE_NOMENCLATURE" />
+        </EntityType>
+        <Association Name="FK_CODE_NOM_REF_490_STR_NOME">
+          <End Role="STR_NOME" Type="Self.STR_NOME" Multiplicity="1" />
+          <End Role="CODE_NOMENCLATURE" Type="Self.CODE_NOMENCLATURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="STR_NOME">
+              <PropertyRef Name="CODE_STR" />
+            </Principal>
+            <Dependent Role="CODE_NOMENCLATURE">
+              <PropertyRef Name="CODE_STR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ESP_INSC_REFERENCE_ESP_ETUD">
+          <End Role="ESP_ETUDIANT" Type="Self.ESP_ETUDIANT" Multiplicity="1" />
+          <End Role="ESP_INSCRIPTION" Type="Self.ESP_INSCRIPTION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESP_ETUDIANT">
+              <PropertyRef Name="ID_ET" />
+            </Principal>
+            <Dependent Role="ESP_INSCRIPTION">
+              <PropertyRef Name="ID_ET" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="cj" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CODE_NOMENCLATURE" EntityType="Self.CODE_NOMENCLATURE" />
+          <EntitySet Name="ESP_ETUDIANT" EntityType="Self.ESP_ETUDIANT" />
+          <EntitySet Name="ESP_INSCRIPTION" EntityType="Self.ESP_INSCRIPTION" />
+          <EntitySet Name="SOCIETE" EntityType="Self.SOCIETE" />
+          <EntitySet Name="STR_NOME" EntityType="Self.STR_NOME" />
+          <AssociationSet Name="FK_CODE_NOM_REF_490_STR_NOME" Association="Self.FK_CODE_NOM_REF_490_STR_NOME">
+            <End Role="STR_NOME" EntitySet="STR_NOME" />
+            <End Role="CODE_NOMENCLATURE" EntitySet="CODE_NOMENCLATURE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ESP_INSC_REFERENCE_ESP_ETUD" Association="Self.FK_ESP_INSC_REFERENCE_ESP_ETUD">
+            <End Role="ESP_ETUDIANT" EntitySet="ESP_ETUDIANT" />
+            <End Role="ESP_INSCRIPTION" EntitySet="ESP_INSCRIPTION" />
+          </AssociationSet>
+          <EntitySet Name="SERVICES_DSI_PRIVILEGE" EntityType="Model1.SERVICES_DSI_PRIVILEGE" />
+        </EntityContainer>
+        <EntityType Name="SERVICES_DSI_PRIVILEGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PRIVILEGE2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PRIVLEGE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FERMER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DEPLACER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="cj">
+          <EntitySetMapping Name="CODE_NOMENCLATURE">
+            <EntityTypeMapping TypeName="Model1.CODE_NOMENCLATURE">
+              <MappingFragment StoreEntitySet="CODE_NOMENCLATURE">
+                <ScalarProperty Name="CODE_STR" ColumnName="CODE_STR" />
+                <ScalarProperty Name="CODE_NOME" ColumnName="CODE_NOME" />
+                <ScalarProperty Name="LIB_NOME" ColumnName="LIB_NOME" />
+                <ScalarProperty Name="LIB_NOME2" ColumnName="LIB_NOME2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESP_ETUDIANT">
+            <EntityTypeMapping TypeName="Model1.ESP_ETUDIANT">
+              <MappingFragment StoreEntitySet="ESP_ETUDIANT">
+                <ScalarProperty Name="ID_ET" ColumnName="ID_ET" />
+                <ScalarProperty Name="NOM_ET" ColumnName="NOM_ET" />
+                <ScalarProperty Name="PNOM_ET" ColumnName="PNOM_ET" />
+                <ScalarProperty Name="DATE_NAIS_ET" ColumnName="DATE_NAIS_ET" />
+                <ScalarProperty Name="LIEU_NAIS_ET" ColumnName="LIEU_NAIS_ET" />
+                <ScalarProperty Name="NATURE_ET" ColumnName="NATURE_ET" />
+                <ScalarProperty Name="FONCTION_ET" ColumnName="FONCTION_ET" />
+                <ScalarProperty Name="ADRESSE_ET" ColumnName="ADRESSE_ET" />
+                <ScalarProperty Name="TEL_ET" ColumnName="TEL_ET" />
+                <ScalarProperty Name="TEL_PARENT_ET" ColumnName="TEL_PARENT_ET" />
+                <ScalarProperty Name="E_MAIL_ET" ColumnName="E_MAIL_ET" />
+                <ScalarProperty Name="CYCLE_ET" ColumnName="CYCLE_ET" />
+                <ScalarProperty Name="NATURE_BAC" ColumnName="NATURE_BAC" />
+                <ScalarProperty Name="DATE_BAC" ColumnName="DATE_BAC" />
+                <ScalarProperty Name="NUM_BAC_ET" ColumnName="NUM_BAC_ET" />
+                <ScalarProperty Name="ETAB_BAC" ColumnName="ETAB_BAC" />
+                <ScalarProperty Name="DIPLOME_SUP_ET" ColumnName="DIPLOME_SUP_ET" />
+                <ScalarProperty Name="NIVEAU_DIPLOME_SUP_ET" ColumnName="NIVEAU_DIPLOME_SUP_ET" />
+                <ScalarProperty Name="ETAB_ORIGINE" ColumnName="ETAB_ORIGINE" />
+                <ScalarProperty Name="SPECIALITE_ESP_ET" ColumnName="SPECIALITE_ESP_ET" />
+                <ScalarProperty Name="DATE_ENTREE_ESP_ET" ColumnName="DATE_ENTREE_ESP_ET" />
+                <ScalarProperty Name="ANNEE_ENTREE_ESP_ET" ColumnName="ANNEE_ENTREE_ESP_ET" />
+                <ScalarProperty Name="CLASSE_COURANTE_ET" ColumnName="CLASSE_COURANTE_ET" />
+                <ScalarProperty Name="SITUATION_FINANCIERE_ET" ColumnName="SITUATION_FINANCIERE_ET" />
+                <ScalarProperty Name="NIVEAU_COURANT_ET" ColumnName="NIVEAU_COURANT_ET" />
+                <ScalarProperty Name="MOYENNE_DERN_SEMESTRE_ET" ColumnName="MOYENNE_DERN_SEMESTRE_ET" />
+                <ScalarProperty Name="RESULTAT_FINAL_ET" ColumnName="RESULTAT_FINAL_ET" />
+                <ScalarProperty Name="DIPLOME_OBTENU_ESP_ET" ColumnName="DIPLOME_OBTENU_ESP_ET" />
+                <ScalarProperty Name="DATE_SORTIE_ET" ColumnName="DATE_SORTIE_ET" />
+                <ScalarProperty Name="OBSERVATION_ET" ColumnName="OBSERVATION_ET" />
+                <ScalarProperty Name="SEXE" ColumnName="SEXE" />
+                <ScalarProperty Name="NATIONALITE" ColumnName="NATIONALITE" />
+                <ScalarProperty Name="NUM_CIN_PASSEPORT" ColumnName="NUM_CIN_PASSEPORT" />
+                <ScalarProperty Name="DATE_SAISIE" ColumnName="DATE_SAISIE" />
+                <ScalarProperty Name="DATE_DERN_MODIF" ColumnName="DATE_DERN_MODIF" />
+                <ScalarProperty Name="AGENT" ColumnName="AGENT" />
+                <ScalarProperty Name="NUM_ORD" ColumnName="NUM_ORD" />
+                <ScalarProperty Name="DATE_DELIVRANCE" ColumnName="DATE_DELIVRANCE" />
+                <ScalarProperty Name="LIEU_DELIVRANCE" ColumnName="LIEU_DELIVRANCE" />
+                <ScalarProperty Name="NIVEAU_ACCES" ColumnName="NIVEAU_ACCES" />
+                <ScalarProperty Name="NATURE_COURS" ColumnName="NATURE_COURS" />
+                <ScalarProperty Name="NATURE_PIECE_ID" ColumnName="NATURE_PIECE_ID" />
+                <ScalarProperty Name="ADRESSE_PARENT" ColumnName="ADRESSE_PARENT" />
+                <ScalarProperty Name="CP_PARENT" ColumnName="CP_PARENT" />
+                <ScalarProperty Name="VILLE_PARENT" ColumnName="VILLE_PARENT" />
+                <ScalarProperty Name="PAYS_PARENT" ColumnName="PAYS_PARENT" />
+                <ScalarProperty Name="CP_ET" ColumnName="CP_ET" />
+                <ScalarProperty Name="VILLE_ET" ColumnName="VILLE_ET" />
+                <ScalarProperty Name="PAYS_ET" ColumnName="PAYS_ET" />
+                <ScalarProperty Name="E_MAIL_PARENT" ColumnName="E_MAIL_PARENT" />
+                <ScalarProperty Name="TEL_PARENT" ColumnName="TEL_PARENT" />
+                <ScalarProperty Name="TYPE_ENREG_ET" ColumnName="TYPE_ENREG_ET" />
+                <ScalarProperty Name="DATE_LIEU_NAIS" ColumnName="DATE_LIEU_NAIS" />
+                <ScalarProperty Name="CODE_ETAB_ORIGINE" ColumnName="CODE_ETAB_ORIGINE" />
+                <ScalarProperty Name="CODE_SPEC_ORIGINE" ColumnName="CODE_SPEC_ORIGINE" />
+                <ScalarProperty Name="LIB_SPEC_ORIGINE" ColumnName="LIB_SPEC_ORIGINE" />
+                <ScalarProperty Name="CLASSE_PREC_ET" ColumnName="CLASSE_PREC_ET" />
+                <ScalarProperty Name="ID_ET_ORIGIN" ColumnName="ID_ET_ORIGIN" />
+                <ScalarProperty Name="ETAT" ColumnName="ETAT" />
+                <ScalarProperty Name="JUSTIF_ETAT" ColumnName="JUSTIF_ETAT" />
+                <ScalarProperty Name="LIB_JUSTIF_ETAT" ColumnName="LIB_JUSTIF_ETAT" />
+                <ScalarProperty Name="ID_ET_NEW" ColumnName="ID_ET_NEW" />
+                <ScalarProperty Name="ID_ET_ORIGINE" ColumnName="ID_ET_ORIGINE" />
+                <ScalarProperty Name="DATE_LAST_CHANGE_ETAT" ColumnName="DATE_LAST_CHANGE_ETAT" />
+                <ScalarProperty Name="DERN_UTILISATEUR" ColumnName="DERN_UTILISATEUR" />
+                <ScalarProperty Name="NUMCOMPTE" ColumnName="NUMCOMPTE" />
+                <ScalarProperty Name="BANQUE" ColumnName="BANQUE" />
+                <ScalarProperty Name="RIB_BANQUE" ColumnName="RIB_BANQUE" />
+                <ScalarProperty Name="MP08" ColumnName="MP08" />
+                <ScalarProperty Name="TYPE_ET" ColumnName="TYPE_ET" />
+                <ScalarProperty Name="CODE_NATIONALITE" ColumnName="CODE_NATIONALITE" />
+                <ScalarProperty Name="NUMPROMOTIONCS" ColumnName="NUMPROMOTIONCS" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_P_AP1" ColumnName="CODE_DECISION_SESSION_P_AP1" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_P_AP1" ColumnName="LIB_DECISION_SESSION_P_AP1" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_R_AP1" ColumnName="CODE_DECISION_SESSION_R_AP1" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_R_AP1" ColumnName="LIB_DECISION_SESSION_R_AP1" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_P_AP2" ColumnName="CODE_DECISION_SESSION_P_AP2" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_P_AP2" ColumnName="LIB_DECISION_SESSION_P_AP2" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_R_AP2" ColumnName="CODE_DECISION_SESSION_R_AP2" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_R_AP2" ColumnName="LIB_DECISION_SESSION_R_AP2" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_P_AP3" ColumnName="CODE_DECISION_SESSION_P_AP3" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_P_AP3" ColumnName="LIB_DECISION_SESSION_P_AP3" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_R_AP3" ColumnName="CODE_DECISION_SESSION_R_AP3" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_R_AP3" ColumnName="LIB_DECISION_SESSION_R_AP3" />
+                <ScalarProperty Name="MOY_P_AP1" ColumnName="MOY_P_AP1" />
+                <ScalarProperty Name="MOY_R_AP1" ColumnName="MOY_R_AP1" />
+                <ScalarProperty Name="MOY_P_AP2" ColumnName="MOY_P_AP2" />
+                <ScalarProperty Name="MOY_R_AP2" ColumnName="MOY_R_AP2" />
+                <ScalarProperty Name="MOY_P_AP3" ColumnName="MOY_P_AP3" />
+                <ScalarProperty Name="MOY_R_AP3" ColumnName="MOY_R_AP3" />
+                <ScalarProperty Name="NB_IMP_RELEVE" ColumnName="NB_IMP_RELEVE" />
+                <ScalarProperty Name="CODE_BARRE" ColumnName="CODE_BARRE" />
+                <ScalarProperty Name="MOY_BAC_ET" ColumnName="MOY_BAC_ET" />
+                <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="FONCTION_PERE_ET" ColumnName="FONCTION_PERE_ET" />
+                <ScalarProperty Name="FONCTION_MERE_ET" ColumnName="FONCTION_MERE_ET" />
+                <ScalarProperty Name="TEL_MERE_ET" ColumnName="TEL_MERE_ET" />
+                <ScalarProperty Name="TEL_PERE_ET" ColumnName="TEL_PERE_ET" />
+                <ScalarProperty Name="EMAIL_PERE_ET" ColumnName="EMAIL_PERE_ET" />
+                <ScalarProperty Name="EMAIL_MERE_ET" ColumnName="EMAIL_MERE_ET" />
+                <ScalarProperty Name="NOM_PERE_ET" ColumnName="NOM_PERE_ET" />
+                <ScalarProperty Name="NOM_MERE_ET" ColumnName="NOM_MERE_ET" />
+                <ScalarProperty Name="ANNEE_BAC" ColumnName="ANNEE_BAC" />
+                <ScalarProperty Name="ANNEE_DIPLOME" ColumnName="ANNEE_DIPLOME" />
+                <ScalarProperty Name="MOY_BAC_ET2" ColumnName="MOY_BAC_ET2" />
+                <ScalarProperty Name="ENTRETIEN_ANGLAIS" ColumnName="ENTRETIEN_ANGLAIS" />
+                <ScalarProperty Name="ENTRETIEN_FRANCAIS" ColumnName="ENTRETIEN_FRANCAIS" />
+                <ScalarProperty Name="ENS_ID_ENS" ColumnName="ENS_ID_ENS" />
+                <ScalarProperty Name="COMITE_ID_GRP" ColumnName="COMITE_ID_GRP" />
+                <ScalarProperty Name="FK_ENS" ColumnName="FK_ENS" />
+                <ScalarProperty Name="FK_ENSEI" ColumnName="FK_ENSEI" />
+                <ScalarProperty Name="TEL_ET1" ColumnName="TEL_ET1" />
+                <ScalarProperty Name="MOY_BAC" ColumnName="MOY_BAC" />
+                <ScalarProperty Name="FILIERE_PREPA" ColumnName="FILIERE_PREPA" />
+                <ScalarProperty Name="LIB_FILIERE_PREPA" ColumnName="LIB_FILIERE_PREPA" />
+                <ScalarProperty Name="DATEENTR" ColumnName="DATEENTR" />
+                <ScalarProperty Name="SCORE_FINAL" ColumnName="SCORE_FINAL" />
+                <ScalarProperty Name="SCORE_MIN_ADMIN" ColumnName="SCORE_MIN_ADMIN" />
+                <ScalarProperty Name="USER_TRANSF_PREINSCRIT" ColumnName="USER_TRANSF_PREINSCRIT" />
+                <ScalarProperty Name="DATE_TRANSF_PREINSCRIT" ColumnName="DATE_TRANSF_PREINSCRIT" />
+                <ScalarProperty Name="NUM_LOT" ColumnName="NUM_LOT" />
+                <ScalarProperty Name="RECOMMANDATION" ColumnName="RECOMMANDATION" />
+                <ScalarProperty Name="GOUVERNORAT" ColumnName="GOUVERNORAT" />
+                <ScalarProperty Name="ADRESSE_MAIL_ESP" ColumnName="ADRESSE_MAIL_ESP" />
+                <ScalarProperty Name="PWD_ET" ColumnName="PWD_ET" />
+                <ScalarProperty Name="PWD_ET_INIT" ColumnName="PWD_ET_INIT" />
+                <ScalarProperty Name="SUIVI_PARTICULIER" ColumnName="SUIVI_PARTICULIER" />
+                <ScalarProperty Name="NIVEAU_COURANT_ANG" ColumnName="NIVEAU_COURANT_ANG" />
+                <ScalarProperty Name="NIVEAU_COURANT_FR" ColumnName="NIVEAU_COURANT_FR" />
+                <ScalarProperty Name="NOM_ARB" ColumnName="NOM_ARB" />
+                <ScalarProperty Name="PNOM_ARB" ColumnName="PNOM_ARB" />
+                <ScalarProperty Name="LIEU_NAIS_ARB" ColumnName="LIEU_NAIS_ARB" />
+                <ScalarProperty Name="NATURE_BAC_ARB" ColumnName="NATURE_BAC_ARB" />
+                <ScalarProperty Name="DIPLOME_SUP_ARB" ColumnName="DIPLOME_SUP_ARB" />
+                <ScalarProperty Name="ETAB_ORIGINE_ARB" ColumnName="ETAB_ORIGINE_ARB" />
+                <ScalarProperty Name="ID_ELEVE_EDUSERV" ColumnName="ID_ELEVE_EDUSERV" />
+                <ScalarProperty Name="PWD_PARENT" ColumnName="PWD_PARENT" />
+                <ScalarProperty Name="NUM_ANNUEL_DIPLOME" ColumnName="NUM_ANNUEL_DIPLOME" />
+                <ScalarProperty Name="NUM_ANNEXE" ColumnName="NUM_ANNEXE" />
+                <ScalarProperty Name="ORIENTATION" ColumnName="ORIENTATION" />
+                <ScalarProperty Name="GROUPE_TARIF" ColumnName="GROUPE_TARIF" />
+                <ScalarProperty Name="CAT_ETAB_ORIGINE" ColumnName="CAT_ETAB_ORIGINE" />
+                <ScalarProperty Name="ETAB_ORIGIN_NEW" ColumnName="ETAB_ORIGIN_NEW" />
+                <ScalarProperty Name="CODE_RFID" ColumnName="CODE_RFID" />
+                <ScalarProperty Name="DATE_HEURE_CREATION" ColumnName="DATE_HEURE_CREATION" />
+                <ScalarProperty Name="ORA_ROWSCN" ColumnName="ORA_ROWSCN" />
+                <ScalarProperty Name="CHOIX_A_B" ColumnName="CHOIX_A_B" />
+                <ScalarProperty Name="CODE_GOUVERNORAT" ColumnName="CODE_GOUVERNORAT" />
+                <ScalarProperty Name="PWD_JWT_ETUDIANT" ColumnName="PWD_JWT_ETUDIANT" />
+                <ScalarProperty Name="DATE_MODIFY_JWT_PWD" ColumnName="DATE_MODIFY_JWT_PWD" />
+                <ScalarProperty Name="NB_DOC_ET" ColumnName="NB_DOC_ET" />
+                <ScalarProperty Name="CURSUS_ET" ColumnName="CURSUS_ET" />
+                <ScalarProperty Name="VALID_PROJET" ColumnName="VALID_PROJET" />
+                <ScalarProperty Name="SESSION_COVID" ColumnName="SESSION_COVID" />
+                <ScalarProperty Name="PROLONGATION_RGLT" ColumnName="PROLONGATION_RGLT" />
+                <ScalarProperty Name="DATE_DEBUT_PRGL" ColumnName="DATE_DEBUT_PRGL" />
+                <ScalarProperty Name="DATE_FIN_PRGL" ColumnName="DATE_FIN_PRGL" />
+                <ScalarProperty Name="DATE_CREATION_TOKEN" ColumnName="DATE_CREATION_TOKEN" />
+                <ScalarProperty Name="TOKEN" ColumnName="TOKEN" />
+                <ScalarProperty Name="TOKN_STUDENT" ColumnName="TOKN_STUDENT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESP_INSCRIPTION">
+            <EntityTypeMapping TypeName="Model1.ESP_INSCRIPTION">
+              <MappingFragment StoreEntitySet="ESP_INSCRIPTION">
+                <ScalarProperty Name="ANNEE_DEB" ColumnName="ANNEE_DEB" />
+                <ScalarProperty Name="ANNEE_FIN" ColumnName="ANNEE_FIN" />
+                <ScalarProperty Name="CODE_CL" ColumnName="CODE_CL" />
+                <ScalarProperty Name="ID_ET" ColumnName="ID_ET" />
+                <ScalarProperty Name="COUT_ANNUEL" ColumnName="COUT_ANNUEL" />
+                <ScalarProperty Name="FRAIS_INS" ColumnName="FRAIS_INS" />
+                <ScalarProperty Name="TYPE_RGLT" ColumnName="TYPE_RGLT" />
+                <ScalarProperty Name="MODE_RGLT" ColumnName="MODE_RGLT" />
+                <ScalarProperty Name="CODE_DEV" ColumnName="CODE_DEV" />
+                <ScalarProperty Name="COUT_DEV" ColumnName="COUT_DEV" />
+                <ScalarProperty Name="SIT_RGLT" ColumnName="SIT_RGLT" />
+                <ScalarProperty Name="CREDIT_RGLT" ColumnName="CREDIT_RGLT" />
+                <ScalarProperty Name="NB_CREDIT_MODULE" ColumnName="NB_CREDIT_MODULE" />
+                <ScalarProperty Name="MOY_SEM1" ColumnName="MOY_SEM1" />
+                <ScalarProperty Name="MOY_SEM2" ColumnName="MOY_SEM2" />
+                <ScalarProperty Name="MOY_GENERAL" ColumnName="MOY_GENERAL" />
+                <ScalarProperty Name="RESULTAT" ColumnName="RESULTAT" />
+                <ScalarProperty Name="NIVEAU_ACCEES" ColumnName="NIVEAU_ACCEES" />
+                <ScalarProperty Name="TYPE_INSC" ColumnName="TYPE_INSC" />
+                <ScalarProperty Name="SEMESTRE" ColumnName="SEMESTRE" />
+                <ScalarProperty Name="NIV_LANGUE" ColumnName="NIV_LANGUE" />
+                <ScalarProperty Name="CODE_CL_LANGUE" ColumnName="CODE_CL_LANGUE" />
+                <ScalarProperty Name="UTILISATEUR" ColumnName="UTILISATEUR" />
+                <ScalarProperty Name="DERN_UTILISATEUR" ColumnName="DERN_UTILISATEUR" />
+                <ScalarProperty Name="DATE_PREINSC" ColumnName="DATE_PREINSC" />
+                <ScalarProperty Name="DATE_INSC" ColumnName="DATE_INSC" />
+                <ScalarProperty Name="CODE_CL1" ColumnName="CODE_CL1" />
+                <ScalarProperty Name="CODE_CL2" ColumnName="CODE_CL2" />
+                <ScalarProperty Name="MOY_RATT" ColumnName="MOY_RATT" />
+                <ScalarProperty Name="OBSERVATION" ColumnName="OBSERVATION" />
+                <ScalarProperty Name="NUMPROMOTIONCS" ColumnName="NUMPROMOTIONCS" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_P" ColumnName="CODE_DECISION_SESSION_P" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_P" ColumnName="LIB_DECISION_SESSION_P" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_RAT" ColumnName="CODE_DECISION_SESSION_RAT" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_RAT" ColumnName="LIB_DECISION_SESSION_RAT" />
+                <ScalarProperty Name="NB_IMP_ATTEST_REUSSITE" ColumnName="NB_IMP_ATTEST_REUSSITE" />
+                <ScalarProperty Name="DATE_LAST_MAJ_DECISION_PRINC" ColumnName="DATE_LAST_MAJ_DECISION_PRINC" />
+                <ScalarProperty Name="DATE_LAST_MAJ_DECISION_RATT" ColumnName="DATE_LAST_MAJ_DECISION_RATT" />
+                <ScalarProperty Name="CREDIT_ANT" ColumnName="CREDIT_ANT" />
+                <ScalarProperty Name="NB_IMP_RELEVE" ColumnName="NB_IMP_RELEVE" />
+                <ScalarProperty Name="ETAT_ENTRETIEN" ColumnName="ETAT_ENTRETIEN" />
+                <ScalarProperty Name="DATE_LAST_MODIF_RAT2" ColumnName="DATE_LAST_MODIF_RAT2" />
+                <ScalarProperty Name="MOY_RAT2" ColumnName="MOY_RAT2" />
+                <ScalarProperty Name="CODE_DECISION_SESSION_RAT2" ColumnName="CODE_DECISION_SESSION_RAT2" />
+                <ScalarProperty Name="LIB_DECISION_SESSION_RAT2" ColumnName="LIB_DECISION_SESSION_RAT2" />
+                <ScalarProperty Name="ADMIS_RACH" ColumnName="ADMIS_RACH" />
+                <ScalarProperty Name="MOY_RAT_AV_RACH" ColumnName="MOY_RAT_AV_RACH" />
+                <ScalarProperty Name="ADMIS_TS" ColumnName="ADMIS_TS" />
+                <ScalarProperty Name="DATE_LIM_PROLONG_RGLT" ColumnName="DATE_LIM_PROLONG_RGLT" />
+                <ScalarProperty Name="NIV_ACQUIS_FRANCAIS" ColumnName="NIV_ACQUIS_FRANCAIS" />
+                <ScalarProperty Name="MAJ_NIVEAU_DEFINITIF" ColumnName="MAJ_NIVEAU_DEFINITIF" />
+                <ScalarProperty Name="RESERVE" ColumnName="RESERVE" />
+                <ScalarProperty Name="NB_ECTS_SP" ColumnName="NB_ECTS_SP" />
+                <ScalarProperty Name="NB_ECTS_SR" ColumnName="NB_ECTS_SR" />
+                <ScalarProperty Name="NIV_ACQUIS_ANGLAIS" ColumnName="NIV_ACQUIS_ANGLAIS" />
+                <ScalarProperty Name="DATE_TEST_FR" ColumnName="DATE_TEST_FR" />
+                <ScalarProperty Name="DATE_TEST_ANG" ColumnName="DATE_TEST_ANG" />
+                <ScalarProperty Name="PREP_TOEIC" ColumnName="PREP_TOEIC" />
+                <ScalarProperty Name="TEST_TOEIC" ColumnName="TEST_TOEIC" />
+                <ScalarProperty Name="ETAT_INS_TEST_NIV" ColumnName="ETAT_INS_TEST_NIV" />
+                <ScalarProperty Name="USER_LANG_MODIF" ColumnName="USER_LANG_MODIF" />
+                <ScalarProperty Name="RANG_SP" ColumnName="RANG_SP" />
+                <ScalarProperty Name="NUM_ANNUEL_DIPLOME" ColumnName="NUM_ANNUEL_DIPLOME" />
+                <ScalarProperty Name="NUM_ANNEXE" ColumnName="NUM_ANNEXE" />
+                <ScalarProperty Name="GROUPE_TARIF" ColumnName="GROUPE_TARIF" />
+                <ScalarProperty Name="MOY_GEN_AV_PFE" ColumnName="MOY_GEN_AV_PFE" />
+                <ScalarProperty Name="NB_ECTS_AV_PFE" ColumnName="NB_ECTS_AV_PFE" />
+                <ScalarProperty Name="NOTE_PFE" ColumnName="NOTE_PFE" />
+                <ScalarProperty Name="COEF_PFE" ColumnName="COEF_PFE" />
+                <ScalarProperty Name="MOY_GEN_AV_PFE_SP" ColumnName="MOY_GEN_AV_PFE_SP" />
+                <ScalarProperty Name="MOY_GEN_AV_PFE_SR" ColumnName="MOY_GEN_AV_PFE_SR" />
+                <ScalarProperty Name="ETAT_FINANCIER" ColumnName="ETAT_FINANCIER" />
+                <ScalarProperty Name="TEM_NUM" ColumnName="TEM_NUM" />
+                <ScalarProperty Name="MG_SEVED" ColumnName="MG_SEVED" />
+                <ScalarProperty Name="RACHAT_UE_ET" ColumnName="RACHAT_UE_ET" />
+                <ScalarProperty Name="ENCADRANT_PEDA" ColumnName="ENCADRANT_PEDA" />
+                <ScalarProperty Name="DATE_CREATION" ColumnName="DATE_CREATION" />
+                <ScalarProperty Name="NUM_MOIS_INSC" ColumnName="NUM_MOIS_INSC" />
+                <ScalarProperty Name="NUM_SEMAINE" ColumnName="NUM_SEMAINE" />
+                <ScalarProperty Name="NE" ColumnName="NE" />
+                <ScalarProperty Name="DATE_NE" ColumnName="DATE_NE" />
+                <ScalarProperty Name="GROUPE_RGLT" ColumnName="GROUPE_RGLT" />
+                <ScalarProperty Name="NE2" ColumnName="NE2" />
+                <ScalarProperty Name="SOLDE_ET" ColumnName="SOLDE_ET" />
+                <ScalarProperty Name="EXPERT_PEDA" ColumnName="EXPERT_PEDA" />
+                <ScalarProperty Name="MOTIF_RGLT" ColumnName="MOTIF_RGLT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SOCIETE">
+            <EntityTypeMapping TypeName="Model1.SOCIETE">
+              <MappingFragment StoreEntitySet="SOCIETE">
+                <ScalarProperty Name="CODE_SOC" ColumnName="CODE_SOC" />
+                <ScalarProperty Name="NOM_SOC" ColumnName="NOM_SOC" />
+                <ScalarProperty Name="ADR_SOC" ColumnName="ADR_SOC" />
+                <ScalarProperty Name="TEL_SOC" ColumnName="TEL_SOC" />
+                <ScalarProperty Name="FAX_SOC" ColumnName="FAX_SOC" />
+                <ScalarProperty Name="SIGLE" ColumnName="SIGLE" />
+                <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+                <ScalarProperty Name="CODE_POSTAL" ColumnName="CODE_POSTAL" />
+                <ScalarProperty Name="DATE_CR" ColumnName="DATE_CR" />
+                <ScalarProperty Name="DATE_MAJ" ColumnName="DATE_MAJ" />
+                <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+                <ScalarProperty Name="RIB" ColumnName="RIB" />
+                <ScalarProperty Name="CODE_TVA" ColumnName="CODE_TVA" />
+                <ScalarProperty Name="BANQUE" ColumnName="BANQUE" />
+                <ScalarProperty Name="RC" ColumnName="RC" />
+                <ScalarProperty Name="CODE_RGLT_COMPTANT" ColumnName="CODE_RGLT_COMPTANT" />
+                <ScalarProperty Name="CODE_RGLT_ESPECE" ColumnName="CODE_RGLT_ESPECE" />
+                <ScalarProperty Name="ANNEE_DEB" ColumnName="ANNEE_DEB" />
+                <ScalarProperty Name="ANNEE_FIN" ColumnName="ANNEE_FIN" />
+                <ScalarProperty Name="TAUX_EXAM" ColumnName="TAUX_EXAM" />
+                <ScalarProperty Name="TAUX_DS" ColumnName="TAUX_DS" />
+                <ScalarProperty Name="TAUX_TP" ColumnName="TAUX_TP" />
+                <ScalarProperty Name="TAUX_ORALE" ColumnName="TAUX_ORALE" />
+                <ScalarProperty Name="NB_MAX_ABS_MODULE" ColumnName="NB_MAX_ABS_MODULE" />
+                <ScalarProperty Name="NB_SCEANCE_JOUR" ColumnName="NB_SCEANCE_JOUR" />
+                <ScalarProperty Name="SYMBOLE" ColumnName="SYMBOLE" />
+                <ScalarProperty Name="TIMB_FISCAL" ColumnName="TIMB_FISCAL" />
+                <ScalarProperty Name="TIMBRE_FISCAL" ColumnName="TIMBRE_FISCAL" />
+                <ScalarProperty Name="DATE_DEBUT_SAISON" ColumnName="DATE_DEBUT_SAISON" />
+                <ScalarProperty Name="NUM_SEMESTRE_ACTUEL" ColumnName="NUM_SEMESTRE_ACTUEL" />
+                <ScalarProperty Name="CHEMIN_FICHIER_DONNEE" ColumnName="CHEMIN_FICHIER_DONNEE" />
+                <ScalarProperty Name="TAUX_EXAM_WITH_CC" ColumnName="TAUX_EXAM_WITH_CC" />
+                <ScalarProperty Name="TAUX_EXAM_WITH_TP_CC" ColumnName="TAUX_EXAM_WITH_TP_CC" />
+                <ScalarProperty Name="MIN_MOY_RESUSSITE" ColumnName="MIN_MOY_RESUSSITE" />
+                <ScalarProperty Name="BI_RACHAT" ColumnName="BI_RACHAT" />
+                <ScalarProperty Name="BS_RACHAT" ColumnName="BS_RACHAT" />
+                <ScalarProperty Name="ID_VACATAIRE" ColumnName="ID_VACATAIRE" />
+                <ScalarProperty Name="GERER_SEMESTRE" ColumnName="GERER_SEMESTRE" />
+                <ScalarProperty Name="FR_SCOLARITE_CS" ColumnName="FR_SCOLARITE_CS" />
+                <ScalarProperty Name="FR_SCOLARITE_CJ" ColumnName="FR_SCOLARITE_CJ" />
+                <ScalarProperty Name="MIN_PANIER" ColumnName="MIN_PANIER" />
+                <ScalarProperty Name="ID_DIRET" ColumnName="ID_DIRET" />
+                <ScalarProperty Name="ID_SERV_SCOLAIRE" ColumnName="ID_SERV_SCOLAIRE" />
+                <ScalarProperty Name="LIAISON_FINANCIER" ColumnName="LIAISON_FINANCIER" />
+                <ScalarProperty Name="TAUX_RGLT" ColumnName="TAUX_RGLT" />
+                <ScalarProperty Name="LIAISON_SITE" ColumnName="LIAISON_SITE" />
+                <ScalarProperty Name="NUMPROMOTIONCS" ColumnName="NUMPROMOTIONCS" />
+                <ScalarProperty Name="DATEDEMARRAGECS" ColumnName="DATEDEMARRAGECS" />
+                <ScalarProperty Name="CONTROL_BALCKLISTE" ColumnName="CONTROL_BALCKLISTE" />
+                <ScalarProperty Name="MAX_VAL_CREDIT_ACCEPTE" ColumnName="MAX_VAL_CREDIT_ACCEPTE" />
+                <ScalarProperty Name="MAX_TAUX_CREDIT_ACCEPTE" ColumnName="MAX_TAUX_CREDIT_ACCEPTE" />
+                <ScalarProperty Name="CREDIT_MAX" ColumnName="CREDIT_MAX" />
+                <ScalarProperty Name="ACTIVE_DISPENSE_AUTO" ColumnName="ACTIVE_DISPENSE_AUTO" />
+                <ScalarProperty Name="ACTIVE_MP_ENS" ColumnName="ACTIVE_MP_ENS" />
+                <ScalarProperty Name="ACTIVE_MODULE_OPT" ColumnName="ACTIVE_MODULE_OPT" />
+                <ScalarProperty Name="VERROU_RESUL" ColumnName="VERROU_RESUL" />
+                <ScalarProperty Name="TOT_ECTS_ADMIS" ColumnName="TOT_ECTS_ADMIS" />
+                <ScalarProperty Name="QUOTA_ECTS_NV" ColumnName="QUOTA_ECTS_NV" />
+                <ScalarProperty Name="ACTIVER_TAUX_ABSENCE" ColumnName="ACTIVER_TAUX_ABSENCE" />
+                <ScalarProperty Name="TAUX_MAX_ABSENCE" ColumnName="TAUX_MAX_ABSENCE" />
+                <ScalarProperty Name="NBH_SEMAINE" ColumnName="NBH_SEMAINE" />
+                <ScalarProperty Name="BLOCK_OTHER_RAT" ColumnName="BLOCK_OTHER_RAT" />
+                <ScalarProperty Name="CTRL_CONFORM_ECTS" ColumnName="CTRL_CONFORM_ECTS" />
+                <ScalarProperty Name="CTRL_FIN_STAT" ColumnName="CTRL_FIN_STAT" />
+                <ScalarProperty Name="VERROU_PL_ETUDE" ColumnName="VERROU_PL_ETUDE" />
+                <ScalarProperty Name="ANNEE_ADMISSION" ColumnName="ANNEE_ADMISSION" />
+                <ScalarProperty Name="DELIB_RESULTATS" ColumnName="DELIB_RESULTATS" />
+                <ScalarProperty Name="AFFICH_NOTE" ColumnName="AFFICH_NOTE" />
+                <ScalarProperty Name="DUREE_PFE" ColumnName="DUREE_PFE" />
+                <ScalarProperty Name="ANNEE" ColumnName="ANNEE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STR_NOME">
+            <EntityTypeMapping TypeName="Model1.STR_NOME">
+              <MappingFragment StoreEntitySet="STR_NOME">
+                <ScalarProperty Name="CODE_STR" ColumnName="CODE_STR" />
+                <ScalarProperty Name="NOM_STR" ColumnName="NOM_STR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICES_DSI_PRIVILEGE">
+            <EntityTypeMapping TypeName="Model1.SERVICES_DSI_PRIVILEGE">
+              <MappingFragment StoreEntitySet="SERVICES_DSI_PRIVILEGE">
+                <ScalarProperty Name="DEPLACER" ColumnName="DEPLACER" />
+                <ScalarProperty Name="FERMER" ColumnName="FERMER" />
+                <ScalarProperty Name="PRIVLEGE" ColumnName="PRIVLEGE" />
+                <ScalarProperty Name="PRIVILEGE2" ColumnName="PRIVILEGE2" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="752c9f8043544771a65101a9e5c9d554" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="Model1.CODE_NOMENCLATURE" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ESP_ETUDIANT" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ESP_INSCRIPTION" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.SOCIETE" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.STR_NOME" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="Model1.FK_CODE_NOM_REF_490_STR_NOME" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_ESP_INSC_REFERENCE_ESP_ETUD" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model1.SERVICES_DSI_PRIVILEGE" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
